@@ -1,15 +1,30 @@
 <template>
-  <div class="about">
-    <h1>Hello!</h1>
-  </div>
+  <Line :data="data" :options="options" />
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script lang="ts">
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'vue-chartjs';
+import * as chartConfig from './chartConfig.js';
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+export default {
+  name: 'App',
+  components: {
+    Line,
+  },
+  data() {
+    return chartConfig;
+  },
+};
+</script>
