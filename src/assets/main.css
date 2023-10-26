@@ -29,7 +29,16 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "A"
+      "B";
   }
 }

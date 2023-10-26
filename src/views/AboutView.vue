@@ -1,5 +1,7 @@
 <template>
-  <Line :data="data" :options="options" />
+  <div class="canvas-wrapper">
+    <Line :data="data" :options="options" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -28,3 +30,11 @@ export default {
   },
 };
 </script>
+
+<style>
+  .canvas-wrapper {
+    display: grid;
+    grid-area: B;
+    width: 100%;
+  }
+</style>
