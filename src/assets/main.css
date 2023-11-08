@@ -37,8 +37,8 @@ a,
 
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 
-      "A"
-      "B";
+    grid-template-areas:
+      'A'
+      'B';
   }
 }
